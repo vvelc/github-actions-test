@@ -1,4 +1,4 @@
-name: 'coverage'
+name: 'change name'
 on:
     pull_request_target:
         branches:
