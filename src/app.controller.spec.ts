@@ -21,6 +21,12 @@ describe('AppController', () => {
     it('should return "Hello World!"', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
+    it('should return "Hello World!"', () => {
+      expect(appController.getHello()).toBe('Hello World!');
+    });
+    it('should return have a New Feature', () => {
+      expect(appController.getNewFeature).toBeDefined();
+    });
     // it('This should always fail', () => {
     //   expect(appController.getHello()).toBe('Fail!');
     // });
