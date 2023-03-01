@@ -27,7 +27,7 @@ describe('AppController', () => {
     it('should return have a New Feature', () => {
       expect(appController.getNewFeature).toBeDefined();
     });
-    it('This should always fail!', () => {
+    it('This should always fail but doesnt matter!', () => {
       expect(appController.getHello()).toBe('Fail!');
     });
   });
