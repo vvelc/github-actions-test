@@ -1,4 +1,4 @@
-name: 'change name'
+name: 'change name superrrr'
 on:
     pull_request_target:
         branches:
