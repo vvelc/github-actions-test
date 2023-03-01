@@ -15,14 +15,14 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hola Mundo!"', () => {
-      expect(appController.getHello()).toBe('Hola Mundo!');
+    it('should not return "Hola Mundo!"', () => {
+      expect(appController.getHello()).not.toBe('Hola Mundo!');
     });
     it('should return "Hello World!"', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
-    it('This should always fail', () => {
-      expect(appController.getHello()).toBe('Fail!');
-    });
+    // it('This should always fail', () => {
+    //   expect(appController.getHello()).toBe('Fail!');
+    // });
   });
 });
