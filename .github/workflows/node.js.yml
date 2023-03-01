@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Code Coverage Report
-      uses: romeovs/lcov-reporter-action@v0.2.16
+      uses: romeovs/lcov-reporter-action@v0.2.11
