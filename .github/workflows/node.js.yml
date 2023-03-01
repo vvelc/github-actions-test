@@ -1,12 +1,16 @@
 name: 'change name'
 on:
+    push:
+        branches:
+            - main
     pull_request_target:
         branches:
-            - master
             - main
 jobs:
     coverage:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@v2
+            - name: Jest coverage report
+              uses: ArtiomTr/jest-coverage-report-action@v2.0.6
+
