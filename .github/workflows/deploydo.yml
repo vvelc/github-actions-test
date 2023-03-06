@@ -32,7 +32,7 @@ jobs:
       run: docker push ${{ secrets.IMAGE_CONTAINER_REGISTRY }}/static-example:$(echo $GITHUB_SHA | head -c7)
 
     - name: Update deployment file
-      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|'${{IMAGE_CONTAINER_REGISTRY}}'/static-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
+      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|'${{ secrets.IMAGE_CONTAINER_REGISTRY }}'/static-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 1a3fb768-0b5c-4f02-ab1a-7781e4a3288f
