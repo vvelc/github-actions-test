@@ -35,7 +35,7 @@ jobs:
       run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|'${{ secrets.IMAGE_CONTAINER_REGISTRY }}'/static-example:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
-      run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 $KUBERNETES_CLUSTER_ID
+      run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.KUBERNETES_CLUSTER_ID}}
 
     - name: Deploy to DigitalOcean Kubernetes
       run: kubectl apply -f $GITHUB_WORKSPACE/config/deployment.yml
