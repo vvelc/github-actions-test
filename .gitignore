@@ -2,6 +2,8 @@
 /dist
 /node_modules
 
+site/_meta
+
 # Logs
 logs
 *.log
