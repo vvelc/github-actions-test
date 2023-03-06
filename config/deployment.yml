@@ -30,23 +30,18 @@ spec:
           limits:
             cpu: 100m
       imagePullSecrets:
-      - name: asb
+      - name: vvelc-container-reg
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: static-example-service
-  annotations:
-    external-dns.alpha.kubernetes.io/hostname: "doctl-action.do-api.dev"
-    service.beta.kubernetes.io/do-loadbalancer-name: "doctl-action.do-api.dev"
-    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "913a4f25-dd44-47e0-8588-eb09f095c7e2"
-    service.beta.kubernetes.io/do-loadbalancer-redirect-http-to-https: "true"
 spec:
   type: LoadBalancer
   ports:
-    - name: https
+    - name: http
       protocol: TCP
-      port: 443
+      port: 80
       targetPort: 5000
   selector:
     app: static-example
