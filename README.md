@@ -1,3 +1,26 @@
+# GitHub Actions Test
+
+Hey! I made this repo for testing GitHub Actions with DigitalOcean Kubernetes services.
+
+### Resources
+
+* [Deploying to DigitalOcean With GitHub Actions](https://www.digitalocean.com/community/tech-talks/deploying-to-digitalocean-with-github-actions) tutorial for the configuration 
+
+* [doctl](https://github.com/marketplace/actions/github-action-for-digitalocean-doctl) GitHub Action for pushing and depolying images.
+
+* [GitHub Actions for DigitalOcean Example](https://github.com/do-community/example-doctl-action) as a template
+
+
+### Note
+
+I will make another repo for testing microservices with the same idea of automated deploying to DigitalOcean
+
+The link will be here when available: _______________________________________
+
+
+
+# Default NestJS README.md
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
